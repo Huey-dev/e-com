@@ -302,6 +302,77 @@ ul{
     display: none;
 }
 
+/* All products */
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+select{
+    border: 3px solid orange;
+    padding: 7px;
+    border-radius: 17px;
+}
+/* any option selected the border remain orange */
+select:focus{
+    outline: none;
+}
+
+.page-btn{
+    margin: 0 auto 50px;
+}
+
+.page-btn span{
+    display: inline-block;
+    border: 1px solid orange;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.page-btn span:hover{
+    background: orangered;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* media-query for menu */
 @media only screen and (max-width:800px) {
     
