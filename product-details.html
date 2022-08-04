@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products scandiweb | e-commerce website design</title>
+    <title>Product details E-com| e-commerce website design</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="">
+    <script src="https://kit.fontawesome.com/5ff5961e58.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- navigation -->
@@ -35,14 +35,30 @@
 <!-- deleted featured categories -->
 
 <!-- single product details -->
-<div class="small-container">
+<div class="small-container single-product">
     <div class="row">
         <div class="col-2">
-            <img src="img/gallery-1.jpg" width="100%" alt="">
+            <img src="img/gallery-1.jpg" width="100%" id="productimg" alt="">
+
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="img/gallery-1.jpg" width="100%" class="smallimg" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/gallery-2.jpg" width="100%" class="smallimg" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/gallery-3.jpg" width="100%" class="smallimg" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/gallery-4.jpg" width="100%" class="smallimg" alt="">
+                </div>
+            </div>
+
         </div>
         <div class="col-2">
             <p>Home / T-Shirt</p>
-            <h1>Red Printed T-Shirt by hrx</h1>
+            <h1>Red Printed T-Shirt by HRX</h1>
             <h4>$50.00</h4>
             <select>
                 <option>Select Size</option>
@@ -52,10 +68,24 @@
                 <option>Medium</option>
                 <option>Small</option>
             </select>
+            <input type="number" value="1">
+            <a href="" class="btn"> Add To Cart</a>
+            <h3>Product Details <i class="fa fa-indent"></i></h3>
+            <br>
+            <p>Give your wardrobe a style upgrade with the HRX Mens Active T-Shirt.</p>
         </div>
     </div>
 </div>
 
+<!-- title -->
+<div class="small-container">
+    <div class="row row-2">
+        <h2> Related Products</h2>
+        <a href="" class="btn">View More</a>
+    </div>
+</div>
+
+<!-- products -->
     <div class="small-container">
        
             <div class="row">
@@ -176,7 +206,28 @@
     }    
 </script>
 
+<!-- Js for product gallery -->
+<script>
+    var productimg = document.getElementById("productimg");
+    var smallimg = document.getElementsByClassName("smallimg");
 
+    smallimg[0].onclick = function()
+    {
+        productimg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function()
+    {
+        productimg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function()
+    {
+        productimg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function()
+    {
+        productimg.src = smallimg[3].src;
+    }
+</script>
 
 
 
