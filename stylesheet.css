@@ -11,22 +11,41 @@ body{
 .nav-bar{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ;
+    top: 100%;
+    
 }
 
 nav{
     flex: 1;
     text-align: right;
+    /* overflow: hidden;
+    max-height: 0px; */
+
 }
 
 nav ul{
+    width: 100%;
     display: inline-block;
-    list-style-type: none;
+    list-style: none;
+    text-align: right;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.5s;
+}
+
+nav ul.open-menu {
+    max-height: 400px;
 }
 
 nav ul li{
     display: inline-block;
-    margin-right: 20px;
+    margin: 10px 20px;
+    list-style: none;
 }
 
 a{
@@ -112,15 +131,19 @@ p{
     /* centralize the small-container end */
     padding-left: 25px;
     padding-right: 25px;
+    transition-duration: 0.5s;
 }
 
+.small-container :hover {
+    transform: translateY(-10px);
+}
 .col-4{
     /* because we need 4 columns */
     flex-basis: 25%;
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
-    transition: transform 0.5s;
+    transition-duration: 0.5s;
 }
 
 .col-4 img{
@@ -526,35 +549,6 @@ input:focus{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media-query for menu */
 @media only screen and (max-width:800px) {
     
@@ -579,6 +573,8 @@ input:focus{
     .menu-icon{
         display: block;
         cursor: pointer;
+        max-height: 400px;
+        /* overflow: hidden; */
     }
          .cart-info{
             display: none;
@@ -589,63 +585,19 @@ input:focus{
 /* media query for less than 600 screen size */
 @media only screen and (max-width: 600px) {
     .row{
-        text-align: center;
+            text-align: center;
     }
-.col-2, .col-3, .col-4{
-    flex-basis: 100%;
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 32px;
+    }
 }
-.single-product .row{
-    text-align: left;
-}
-.single-product .col-2{
-    padding: 20px 0;
-}
-.single-product h1{
-    font-size: 26px;
-    line-height: 32px;
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
